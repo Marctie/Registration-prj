@@ -4,7 +4,7 @@ import { Login } from "../login/login";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login],
+  imports: [RouterOutlet],
   template:`
 
   <h1 class="center" > Benvenuto nella pagina, se sei registrato fai il login altrimenti registrati</h1>

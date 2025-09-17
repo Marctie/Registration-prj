@@ -1,7 +1,7 @@
 import { Component, computed, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Service } from '../servicies/service';
 import { JsonPipe } from '@angular/common';
+import { AuthService } from '../servicies/auth-service';
 
 @Component({
   selector: 'app-login',
@@ -26,11 +26,11 @@ export class Login implements OnInit{
   username: string | undefined;
   password: any;
   userDataLogin = computed(() => {
-    const dataLogin = this.service.userDataLogin()
+    const dataLogin = this.authService.userDataLogin()
     return dataLogin;
   });
 //Costruttore
-  constructor(private service:Service){}
+  constructor(private authService:AuthService){}
 
   //Funzioni
   ngOnInit(): void {

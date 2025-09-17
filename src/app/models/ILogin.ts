@@ -1,4 +1,4 @@
-export interface UserReg {
+export interface ILogin{
     id:number,
     username:number,
     password:number,
