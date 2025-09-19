@@ -1,10 +1,61 @@
-import { Component } from '@angular/core';
+import { Component, computed, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from '../servicies/auth-service';
+import { IUser } from '../models/IUser';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
-  imports: [],
-   template:``,
+  imports: [ReactiveFormsModule, RouterLink],
+   template:`
+  <div class="login-wrapper">
+  <form [formGroup]="registerform" (ngSubmit)="onSubmit()">
+     <p>Inserisci il Nome:</p>
+     <input type="name" formControlName="nome" />
+     <p>Inserisci il cognome:</p>
+     <input type="name" formControlName="cognome" />
+     <p>username:</p>
+     <input type="name" formControlName="username" />
+     <p>password:</p>
+     <input type="password" formControlName="password" />
+     <button [disabled]="!registerform.valid">Registrati</button>
+  </form>
+  <div class="go-back-button-container">
+    <button routerLink="/home" class="go-back-button" (click)="goBack()">Torna Indietro</button>
+  </div>
+</div> `,
 })
-export class Signin {
+export class Signin implements OnInit {
+  //Variabili
+  registerform: FormGroup = new FormGroup({});
+  nome=''
+  cognome:string | undefined;
+  username: string | undefined;
+  password: any;
+  userDataReg = computed(() => {
+    const dataReg = this.authService.userDataReg();
+    return dataReg;
+  });
+  //Costruttore
+  constructor(private authService: AuthService) {}
+
+  //Funzioni
+  ngOnInit(): void {
+    this.registerform = new FormGroup({
+      nome: new FormControl('', Validators.required),
+      cognome: new FormControl('', Validators.required),
+      username: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required),
+    });
+  }
+
+  onSubmit() {
+    console.log(this.registerform)
+     const user = this.registerform.value
+     user.id=user.id
+     this.authService.registrationData(user)
+     console.log(user)
+  }
+  goBack() {}
 
 }

@@ -1,0 +1,81 @@
+{
+  "utenti": [
+    {
+      "id": "",
+      "username": "",
+      "password": ""
+    },
+    {
+      "id": 0,
+      "nome": "dfsf",
+      "cognome": "dfsfd",
+      "username": "sfdfsfd",
+      "password": "dsfdfs"
+    },
+    {
+      "id": 0,
+      "nome": "12",
+      "cognome": "1223",
+      "username": "3425678596",
+      "password": "6532"
+    },
+    {
+      "id": 0,
+      "username": "cs",
+      "password": "cs"
+    },
+    {
+      "id": "84e0",
+      "username": "utente",
+      "password": "utente"
+    },
+    {
+      "id": "",
+      "nome": "bds",
+      "cognome": "bfsdbfds",
+      "username": "fsdbfbsz",
+      "password": "bfbsdbfsdb"
+    },
+    {
+      "id": "f7a3",
+      "nome": "dc<ac",
+      "cognome": "d<ac<c",
+      "username": "sdcdd",
+      "password": "asdcsds"
+    },
+    {
+      "id": "1bdf",
+      "nome": "dc<acsdad",
+      "cognome": "d<ac<c",
+      "username": "sdcdd",
+      "password": "asdcsds"
+    },
+    {
+      "id": "b70f",
+      "username": "marco",
+      "password": "marco"
+    },
+    {
+      "id": "b49d",
+      "username": "marco",
+      "password": "dsaqehtsyrj"
+    },
+    {
+      "id": "7ba0",
+      "username": "marco",
+      "password": "dsaqehtsyrj"
+    },
+    {
+      "id": "7ce1",
+      "username": "sddsd",
+      "password": "dsdsd"
+    },
+    {
+      "id": "7789",
+      "nome": "FF",
+      "cognome": "JJJ",
+      "username": "marcolino",
+      "password": "marcolino"
+    }
+  ]
+}

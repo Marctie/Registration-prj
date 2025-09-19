@@ -8,7 +8,6 @@ import { Home } from "./home/home";
   imports: [Home, RouterOutlet],
   template:`
 <router-outlet></router-outlet>  
-<app-home></app-home>
 `,
   styles:``,
 })

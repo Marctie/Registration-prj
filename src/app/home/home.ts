@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
+import { Router } from '@angular/router';
+import { FirstPage } from "../first-page/first-page";
 
 @Component({
   selector: 'app-home',
-  imports: [RouterOutlet],
+  imports: [FirstPage],
 template:`
 
   <h1 class="center" > Benvenuto nella pagina, se sei registrato fai il login altrimenti registrati</h1>
@@ -11,7 +12,6 @@ template:`
   <button (click)="loginClick()" class="button button-login">Login</button>
   <button (click)="regClick()" class="button button-registrati">Registrati</button>
 </div>
-<router-outlet></router-outlet>
   `,
   styles:`
 /* Contenitore dei bottoni con spaziatura */
