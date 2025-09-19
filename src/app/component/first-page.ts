@@ -1,6 +1,7 @@
-import { Component, inject, input, output } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
-import { AuthService } from '../servicies/auth-service';
+import { Component, inject, output } from "@angular/core"
+import { RouterLink, Router } from "@angular/router"
+import { AuthService } from "../servicies/auth-service"
+
 
 @Component({
   selector: 'app-first-page',

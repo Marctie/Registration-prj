@@ -1,9 +1,10 @@
-import { Component, computed, input, Input, OnInit } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { JsonPipe } from '@angular/common';
-import { AuthService } from '../servicies/auth-service';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { FirstPage } from '../first-page/first-page';
+import { JsonPipe } from "@angular/common";
+import { Component, OnInit, computed } from "@angular/core";
+import { ReactiveFormsModule, FormGroup, FormControl, Validators } from "@angular/forms";
+import { RouterLink, Router, ActivatedRoute } from "@angular/router";
+import { AuthService } from "../../servicies/auth-service";
+import { FirstPage } from "../first-page";
+
 
 @Component({
   selector: 'app-login',

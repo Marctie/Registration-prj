@@ -1,9 +1,9 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable, signal } from '@angular/core';
-import { map, Observable } from 'rxjs';
-import { ILogin} from '../models/ILogin';
-import { IUser} from '../models/IUser';
-import { Route, Router } from '@angular/router';
+import { HttpClient } from "@angular/common/http"
+import { Injectable, signal } from "@angular/core"
+import { Router } from "@angular/router"
+import { map } from "rxjs"
+import { ILogin } from "../models/ILogin"
+import { IUser } from "../models/IUser"
 
 @Injectable({
   providedIn: 'root'

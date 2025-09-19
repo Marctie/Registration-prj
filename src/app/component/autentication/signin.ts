@@ -1,8 +1,8 @@
-import { Component, computed, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
-import { AuthService } from '../servicies/auth-service';
-import { IUser } from '../models/IUser';
-import { RouterLink } from '@angular/router';
+import { Component, OnInit, computed } from "@angular/core";
+import { ReactiveFormsModule, FormGroup, FormControl, Validators } from "@angular/forms";
+import { RouterLink } from "@angular/router";
+import { AuthService } from "../../servicies/auth-service";
+
 
 @Component({
   selector: 'app-signin',

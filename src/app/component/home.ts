@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { FirstPage } from "../first-page/first-page";
+import { Component } from "@angular/core";
+import { Router } from "@angular/router";
+import { FirstPage } from "./first-page";
 
 @Component({
   selector: 'app-home',
