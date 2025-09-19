@@ -1,11 +1,12 @@
 import { Component, inject, output } from "@angular/core"
 import { RouterLink, Router } from "@angular/router"
 import { AuthService } from "../servicies/auth-service"
+import { Balance } from "./balance";
 
 
 @Component({
   selector: 'app-first-page',
-  imports: [RouterLink],
+  imports: [RouterLink, Balance],
    template:`
      <!--passaggio del dato dal servizio al child di riferimento -->
    @defer(when authService.userLogin()){
@@ -18,9 +19,9 @@ import { AuthService } from "../servicies/auth-service"
     <button (click)="onPress()" class="logout-button-green" >Visualizza Saldo</button>
   </div>
 </section>
-
+<!-- aggiunta del componente per mostrare il saldo al click del bottone precedente --> 
 <section>
-  
+  <app-balance></app-balance>
 </section>
 }
 <!-- TODO: ricordati di fare in modo che nel back non ti mostri una sessione ancora "loggata" -->
@@ -172,6 +173,7 @@ export class FirstPage {
   // passaggio del dato da html alla funzione (pero solo username)
   onLogout(nameuser:string){
   // this.goodbye.emit("Grazie per averci scelto" + this.authService.userLogin())
+this.authService.authenticated.set(false)
   this.goodbye.emit("Grazie per averci scelto" + nameuser)
   console.log("click avvenuto")
   this.router.navigate(["/login", "marco"] );

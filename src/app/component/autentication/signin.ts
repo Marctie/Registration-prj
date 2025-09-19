@@ -1,6 +1,6 @@
 import { Component, OnInit, computed } from "@angular/core";
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from "@angular/forms";
-import { RouterLink } from "@angular/router";
+import { Router, RouterLink } from "@angular/router";
 import { AuthService } from "../../servicies/auth-service";
 
 
@@ -37,7 +37,7 @@ export class Signin implements OnInit {
     return dataReg;
   });
   //Costruttore
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router:Router) {}
 
   //Funzioni
   ngOnInit(): void {
@@ -55,6 +55,10 @@ export class Signin implements OnInit {
      user.id=user.id
      this.authService.registrationData(user)
      console.log(user)
+setTimeout(()=>{
+  alert("Registrazione avvenuta! Puoi fare il Login")
+  this.router.navigate(["/login"] );
+},2000)
   }
   goBack() {}
 
